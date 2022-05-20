@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React /*, { useState }*/ from "react";
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 import "./ExpenseItem.css";
@@ -15,15 +15,19 @@ const ExpenseItem = (props) => {
   // setDate(new Date(2022, 5, 5));
   //   console.log(title);
   // };
+
+  // console.log(props.id);
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={props.date} />
-      <div className="expense-item__description">
-        <h2>{props.title}</h2>
-        <div className="expense-item__price">$ {props.amount}</div>
-      </div>
-      {/* <button onClick={changeTitle}>Change Title</button> */}
-    </Card>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date} />
+        <div className="expense-item__description">
+          <h2>{props.title}</h2>
+          <div className="expense-item__price">$ {props.amount}</div>
+        </div>
+        {/* <button onClick={changeTitle}>Change Title</button> */}
+      </Card>
+    </li>
   );
 };
 

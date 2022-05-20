@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+import "./index.css";
 
 // Initialize data in case of no previous data exists.
 const INITIAL_DATA = [
